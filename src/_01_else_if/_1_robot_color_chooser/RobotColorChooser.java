@@ -37,7 +37,7 @@ public class RobotColorChooser {
 				robo.setPenColor(Color.red);
 			}
 			else if(color.equalsIgnoreCase("blue")) {
-				robo.setPenColor(Color.red);
+				robo.setPenColor(Color.blue);
 			}
 			else if(color.equalsIgnoreCase("orange")) {
 				robo.setPenColor(Color.orange);

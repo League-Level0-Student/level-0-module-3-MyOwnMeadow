@@ -3,12 +3,39 @@ package _01_else_if._3_high_low;
 
 import java.util.Random;
 
+import javax.swing.JOptionPane;
+
 public class HighLowGame {
 
 	public static void main(String[] args) {
 		// 3. Change this line to give you a random number between 1 - 100. 
-		int random = new Random().nextInt(5);
+		int star = new Random().nextInt(100)+1;
+		System.out.println(star);
 		
+		int guessNum = 12;
+		
+		while(guessNum > 0) {
+			String guessS = JOptionPane.showInputDialog("Guess a number between 1 and 100.\n" + "[NUMBER OF GUESSES LEFT:" + guessNum + "]");
+			int guess = Integer.parseInt(guessS);
+			
+			if(guess == star) {
+				JOptionPane.showMessageDialog(null, "Congragulations! You won the Star affter only " + guessNum + " atempts!\n");
+				System.exit(0);
+			}
+			else if(guess > star && guess <= 100) {
+				JOptionPane.showMessageDialog(null, "You're to high...");
+			}
+			else if(guess < star && guess >= 1) {
+				JOptionPane.showMessageDialog(null, "You're to low...");
+			}
+			else {
+				JOptionPane.showMessageDialog(null, "Nice try, but you need to actchaly guess between 1 and 100 (incleding 1 and 100).");
+				guessNum -= 1;
+			}
+			guessNum -= 1;
+		}
+		
+		JOptionPane.showMessageDialog(null, "It looks like you have run out of atempts. Well, nice knowing ya!");
 		// 2. Print out the random variable above
 		
 		// 11. Repeat steps 1 to 10 ten times
