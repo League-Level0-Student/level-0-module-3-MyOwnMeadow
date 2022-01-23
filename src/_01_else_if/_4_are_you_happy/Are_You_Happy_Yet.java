@@ -1,7 +1,5 @@
 package _01_else_if._4_are_you_happy;
 
-import java.util.Random;
-
 import javax.swing.JOptionPane;
 
 public class Are_You_Happy_Yet {
@@ -19,12 +17,16 @@ public class Are_You_Happy_Yet {
 				JOptionPane.showMessageDialog(null, "Change something in your life. Go for a walk or a bike ride, talk to frinds, play games, what ever ushaly makes you happy.");				
 			}
 			else if(ancer1.equalsIgnoreCase("no")) {
-				JOptionPane.showMessageDialog(null, "Are you sure? Well, I guess you can do what you want, but just know that everyone deserves to be happy, inclueding you.");
+				JOptionPane.showMessageDialog(null, "Are you sure? Well, I guess you can do what you want, but just know that everyone deserves to be happy, inclueding you. :)");
 			}
 			else {
 				JOptionPane.showMessageDialog(null, "ERROR: #)#\n" + "R#@%IN% S^@%#MS>>>");
 				System.exit(0);
 			}
+		}
+		else {
+			JOptionPane.showMessageDialog(null, "PLEASE ANCER EITHER ''YES'' OR ''NO.''");
+			System.exit(0);
 		}
 	}
 }
