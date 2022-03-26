@@ -19,6 +19,13 @@ public class The_House {
 //Secrits
 	static int kichin = 0;
 	
+//Stats
+	static int yourMaxHP = 100;
+	static int yourHP = 100;
+	
+	
+	static int bossHP = 0;
+	
 	public static void main(String[]args) {
 	//Printing for debug
 		System.out.println(ran1);
@@ -28,8 +35,8 @@ public class The_House {
 		
 	//=============================
 		
-		int bossHP = 0;
-		String wep = JOptionPane.showInputDialog(null, "You are a brave advencherer. Durring a walk, you stumble stumble across an old town hiddin deep within the forest. Only one building seems to be standing.\n"
+		String wep = JOptionPane.showInputDialog(null, "You are a brave advencherer from the kingdom of Magidal. Durring a walk,\n"
+				+ "you stumble stumble across an abadened town hiddin deep within the forest. Only one building seems to still be standing.\n"
 				+ "With you, you have 5 healing potions (a.k.a. Potion), 20ft of rope, an oil lantern, and your trusty...\n"
 				+ "[CHOSE ONE:\n"
 				+ "SWORD\n"
@@ -52,8 +59,11 @@ public class The_House {
 		while(bossHP == 0) {
 			String hallDoor = hall1();
 			if(hallDoor.equalsIgnoreCase("L1")) {
-				JOptionPane.showMessageDialog(null, "You walk into what appears to be an old dining hall,\n"
-						+ "compleat with fun decerations and a stage for preformences.");
+				JOptionPane.showMessageDialog(null, "You walk into what appears to be an old dining hall for children,\n"
+						+ "compleat with (now decaying) fun decerations, colorfull table cloths, and a stage for preformences.\n"
+						+ "Some tables off to the side hold a buffay of food, that would of looked apealing if the food wasen't as old as the rest of the place.\n"
+						+ "The dining tables in the center are haphazerdy set, as expected of a food cort with kids. Odd how it wasn't cleaned up.\n"
+						+ "One of the table cloths is stained. Looks like someone spilt the furit punch. This place seems like it was an ideal spot for birthday partys at some point.");
 				JOptionPane.showMessageDialog(null, "......");
 				JOptionPane.showInputDialog(null, "Something about this room feels... off.\n"
 						+ "Like something was, and still is, hidden from view...\n"
@@ -62,7 +72,7 @@ public class The_House {
 				trapRoom(); //Code + Key
 			}
 			else if(hallDoor.equalsIgnoreCase("L2")) {
-				//Maintnence room (gear/enconter)
+				//Maintnence room (gear/enconter + hint)
 			}
 			else if(hallDoor.equalsIgnoreCase("R1")) {
 				//Locked
@@ -233,7 +243,7 @@ public class The_House {
 //ADD KEY
 		}
 		else if(ran4 == trapDoor - 40) {
-			JOptionPane.showMessageDialog(null, "You clime down the later, and enter what appers to be a stroge room for party suplies.");
+			JOptionPane.showMessageDialog(null, "You clime down the ladder, and enter what appers to be a stroge room for party suplies.");
 			JOptionPane.showMessageDialog(null, "......");
 			JOptionPane.showMessageDialog(null, "You've already been here. You clime back out.");
 		}
@@ -241,15 +251,25 @@ public class The_House {
 			//Encounter
 		}
 		else if(trapDoor != 1){
-			JOptionPane.showMessageDialog(null, "You clime down the old latter to find an old storege room,\n"
+			JOptionPane.showMessageDialog(null, "You clime down the rusty ladder to find an old storege room,\n"
 					+ "filled to the brim with varies suplys, ranging from decaying\n"
-					+ " paper plates and utensils to varyis cleaning suplies.");
+					+ " paper plates and utensils to mops and buckets. There's some bleach as well.");
 			JOptionPane.showMessageDialog(null, ".....\n"
 					+ "There's nothing of note here. You clime back out.");
 		}
 	}
 	}
+	static String matniceRoom() {
+		JOptionPane.showMessageDialog(null, "You barrly have time to look around before one of the robots activates and attacks you.");
+		return "[IN THE WORKS]";
+	}
+	static int enconterEndo() {
+		String act = JOptionPane.showInputDialog("The robot twiches, its old joints squweeking in agony.\n"
+				+ "??? HP:");
+		return 1;
+	}
 }
+
 
 
 
