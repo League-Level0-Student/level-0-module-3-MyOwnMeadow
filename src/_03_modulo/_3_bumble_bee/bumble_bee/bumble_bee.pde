@@ -7,7 +7,15 @@ void setup() {
 }
 
 void draw() {
-  
+  for(int i = 0; i < 40; i +=1) {
+    if(i%2 == 0) {
+      fill(#2D2234);
+    }
+    else {
+      fill(#FFCD00);
+    }
+    ellipse(i*10, i*10, 50, 50);
+  }
 // First run the program and you should see a flower.  
   
   
