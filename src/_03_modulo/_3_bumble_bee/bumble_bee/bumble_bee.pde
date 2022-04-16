@@ -7,7 +7,8 @@ void setup() {
 }
 
 void draw() {
-  for(int i = 0; i < 40; i +=1) {
+  int i = 0;
+  for(i = 0; i < 40; i +=1) {
     if(i%2 == 0) {
       fill(#2D2234);
     }
@@ -16,6 +17,7 @@ void draw() {
     }
     ellipse(i*10, i*10, 50, 50);
   }
+  drawBeeFace(i*10, i*10);
 // First run the program and you should see a flower.  
   
   
